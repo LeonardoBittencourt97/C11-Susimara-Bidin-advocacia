@@ -42,7 +42,7 @@ export function About() {
         );
       }
 
-      // 2. Foto oficial da Dra. Sloane Andrade: entrada com elevação e scale elegante
+      // 2. Foto oficial da Dra. Susimara Bidin: entrada com elevação e scale elegante
       if (photoCardRef.current) {
         gsap.fromTo(
           photoCardRef.current,
@@ -132,17 +132,17 @@ export function About() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="bullet-indicator text-[#A6766A]" />
-              <span className="font-heading uppercase text-xs tracking-widest text-[#A6766A] font-bold">
+              <span className="bullet-indicator text-[var(--brand-burgundy-light)]" />
+              <span className="font-heading uppercase text-xs tracking-widest text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold">
                 01 / Perfil Profissional & Trajetória
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold">
-              Sobre a Dra. Sloane Andrade
+              Sobre a Dra. Susimara Teixeira Bidin
             </h2>
           </div>
           <p className="font-body text-sm sm:text-base text-[var(--text-muted)] max-w-xl leading-relaxed">
-            Mais de uma década aliando dedicação dogmática, empatia acolhedora e compromisso irrestrito com a segurança jurídica de cada cliente.
+            Mais de 8 anos aliando sólida fundamentação técnica, acolhimento humano e rigor ético na defesa de famílias e trabalhadores.
           </p>
         </div>
 
@@ -151,40 +151,40 @@ export function About() {
           {/* Coluna de Conteúdo e Textos */}
           <div ref={textContentRef} className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-start space-y-6">
             <div className="about-text-anim space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A6766A]/10 border border-[#A6766A]/30 text-xs font-heading font-semibold text-[#A6766A]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--brand-burgundy)]/10 border border-[var(--brand-burgundy)]/30 text-xs font-heading font-semibold text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Advocacia Combina Técnica & Empatia</span>
+                <span>Atuação Humanizada & Técnica Especializada</span>
               </div>
               <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-main)] leading-tight">
-                Advocacia Personalizada, Próxima e Resolutiva
+                Advocacia com Atendimento Direto e Zelo Individualizado
               </h3>
             </div>
 
             {/* Citação de Proposta de Valor */}
-            <div className="about-text-anim p-4 sm:p-5 rounded-2xl bg-[var(--bg-secondary)]/60 border border-[var(--border-subtle)]/30 border-l-4 border-l-[#A6766A] shadow-2xs">
+            <div className="about-text-anim p-4 sm:p-5 rounded-2xl bg-[var(--bg-secondary)]/60 border border-[var(--border-subtle)]/30 border-l-4 border-l-[var(--brand-burgundy)] shadow-2xs">
               <p className="font-heading italic text-sm sm:text-base text-[var(--text-main)] leading-relaxed">
                 &ldquo;{LAWYER_PROFILE.quote}&rdquo;
               </p>
             </div>
 
-            {/* Resumo da trajetória — Trecho atualizado conforme solicitação do usuário */}
+            {/* Resumo da trajetória */}
             <p className="about-text-anim font-body text-sm sm:text-base text-[var(--text-main)] leading-relaxed font-normal">
-              Com mais de 10 anos de prática forense consolidada em Guaíra/SP e comarcas paulistas, a Dra. Sloane Ferreira de Andrade conduz uma advocacia estratégica que prioriza o contato direto com a titular em todas as fases do processo.
+              {LAWYER_PROFILE.bioShort}
             </p>
 
             {/* Destaques Rápidos */}
             <div className="about-text-anim grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#A6766A] block">+10 Anos</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Trajetória e solidez jurídica</span>
+                <span className="font-heading text-xs font-bold text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] block">+8 Anos</span>
+                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Prática jurídica forense</span>
               </div>
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#A6766A] block">100% Pessoal</span>
+                <span className="font-heading text-xs font-bold text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] block">100% Pessoal</span>
                 <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Atendimento com a titular</span>
               </div>
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs col-span-2 sm:col-span-1">
-                <span className="font-heading text-xs font-bold text-[#A6766A] block">MBA Especialista</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Trabalhista e Acidentário</span>
+                <span className="font-heading text-xs font-bold text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] block">Pós-Graduação</span>
+                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Direito & Processo do Trabalho</span>
               </div>
             </div>
 
@@ -193,10 +193,10 @@ export function About() {
               <button
                 type="button"
                 onClick={handleToggleExpand}
-                className="btn-pill bg-white dark:bg-[#151A1F] text-[#1A1D20] dark:text-white border-2 border-[#A6766A] hover:bg-[#A6766A] hover:text-white dark:hover:bg-[#A6766A] dark:hover:text-white gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
+                className="btn-pill bg-white dark:bg-[#1A1A1A] text-[var(--text-main)] border-2 border-[var(--brand-burgundy)] hover:bg-[var(--brand-burgundy)] hover:text-white dark:hover:bg-[var(--brand-burgundy)] dark:hover:text-white gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
                 aria-expanded={isExpanded}
               >
-                <span>{isExpanded ? "Ocultar detalhes curriculares" : "Saber mais sobre a Dra. Sloane"}</span>
+                <span>{isExpanded ? "Ocultar detalhes curriculares" : "Saber mais sobre a Dra. Susimara"}</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-300 ${
                     isExpanded ? "rotate-180" : "rotate-0"
@@ -208,7 +208,7 @@ export function About() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-pill bg-[#A6766A] hover:bg-[#8d5e53] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center"
+                className="btn-pill bg-[var(--brand-burgundy-light)] hover:bg-[var(--brand-burgundy)] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
                 <span>Solicitar Atendimento Direto</span>
@@ -223,13 +223,13 @@ export function About() {
                     Histórico Profissional Completo
                   </h4>
                   <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-                    Graduada em Direito pelo Centro Universitário da Fundação Educacional de Barretos (UNIFEB) em 2016 e pós-graduada com MBA em Direito do Trabalho e Previdenciário com foco em acidente do trabalho pela Faculdade Legale. Possui cursos de extensão em Formação do Advogado Civilista e Super Formação do Advogado Trabalhista. Atuou previamente junto à Polícia Civil do Estado de São Paulo (Guaíra/SP) e consolidou uma advocacia autônoma combativa, humanizada e personalizada, com atendimento direto em âmbito consultivo e contencioso.
+                    {LAWYER_PROFILE.bio}
                   </p>
                 </div>
 
                 <div className="space-y-3">
                   <h4 className="font-heading text-base font-bold text-[var(--text-main)] flex items-center gap-2">
-                    <GraduationCap className="w-5 h-5 text-[#A6766A]" />
+                    <GraduationCap className="w-5 h-5 text-[var(--brand-burgundy-light)]" />
                     <span>Formação Acadêmica & Especializações</span>
                   </h4>
 
@@ -240,7 +240,7 @@ export function About() {
                         className="p-4 rounded-xl border border-[var(--border-subtle)]/25 bg-[var(--bg-card)] shadow-2xs flex flex-col justify-between"
                       >
                         <div>
-                          <span className="font-heading text-xs uppercase tracking-wider text-[#A6766A] font-semibold block mb-1">
+                          <span className="font-heading text-xs uppercase tracking-wider text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-semibold block mb-1">
                             {item.institution}
                           </span>
                           <h5 className="font-heading text-sm font-bold text-[var(--text-main)] leading-snug mb-1.5">
@@ -258,10 +258,10 @@ export function About() {
             )}
           </div>
 
-          {/* Coluna da Foto Oficial da Dra. Sloane */}
+          {/* Coluna da Foto Oficial da Dra. Susimara */}
           <div className="lg:col-span-5 order-1 lg:order-2 w-full flex justify-center lg:justify-end">
             <div ref={photoCardRef} className="w-full max-w-[360px] sm:max-w-[400px] will-change-transform">
-              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#D4A396]/80 shadow-2xl hover-lift group bg-[#151A1F]">
+              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[var(--brand-burgundy-light)]/80 shadow-2xl hover-lift group bg-[#1A1A1A]">
                 {/* Feixe de luz suave */}
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none" />
                 <Image
@@ -276,14 +276,14 @@ export function About() {
 
                 {/* Badge Inferior com Nome e OAB */}
                 <div className="absolute bottom-5 left-5 right-5 text-white z-10 pointer-events-none">
-                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#D4A396] font-heading font-semibold block mb-1">
+                  <span className="text-[0.6875rem] uppercase tracking-widest text-[var(--brand-beige)] font-heading font-semibold block mb-1">
                     Advogada Titular • {OFFICE_INFO.oab}
                   </span>
                   <p className="font-heading text-xl sm:text-2xl font-bold leading-tight text-white drop-shadow-sm">
                     {LAWYER_PROFILE.name}
                   </p>
                   <p className="text-xs text-gray-200 font-body mt-1 leading-relaxed">
-                    Pós-graduada e MBA em Direito do Trabalho, Previdenciário e Acidentário
+                    Pós-graduada em Direito e Processo do Trabalho • Especialista em Família
                   </p>
                 </div>
               </div>
@@ -291,11 +291,11 @@ export function About() {
           </div>
         </div>
 
-        {/* Bloco 2: Missão, Visão e Valores — EXATAMENTE IGUAL AOS PILARES INSTITUCIONAIS */}
+        {/* Bloco 2: Missão, Visão e Valores */}
         <div className="pt-8 border-t border-[var(--border-subtle)]/30">
           <div className="relative flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25 mb-8 text-[var(--text-muted)]">
             <div className="flex items-center gap-2.5">
-              <Compass className="w-4 h-4 text-[#A6766A]" />
+              <Compass className="w-4 h-4 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
               <span className="font-heading uppercase text-xs tracking-widest font-bold text-[var(--text-main)]">
                 Diretrizes & Princípios Norteadores
               </span>
@@ -311,14 +311,14 @@ export function About() {
           >
             {/* 1. Nossa Missão */}
             <div className="about-pillar-item flex flex-col items-start px-0 md:px-6 pt-6 md:pt-0 first:pt-0 first:pl-0 will-change-transform">
-              <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-                <Compass className="w-5 h-5 text-[#A6766A]" />
+              <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+                <Compass className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
                 <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
                   Nossa Missão
                 </span>
               </div>
               <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-                Excelência Técnica & Empatia
+                Segurança Jurídica & Empatia
               </h3>
               <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
                 {OFFICE_INFO.pillars.mission}
@@ -327,14 +327,14 @@ export function About() {
 
             {/* 2. Nossa Visão */}
             <div className="about-pillar-item flex flex-col items-start px-0 md:px-6 pt-6 md:pt-0 first:pt-0 will-change-transform">
-              <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-                <Eye className="w-5 h-5 text-[#A6766A]" />
+              <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+                <Eye className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
                 <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
                   Nossa Visão
                 </span>
               </div>
               <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-                Referência em Advocacia Personalizada
+                Referência em Araucária e Região
               </h3>
               <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
                 {OFFICE_INFO.pillars.vision}
@@ -343,8 +343,8 @@ export function About() {
 
             {/* 3. Nossos Valores */}
             <div className="about-pillar-item flex flex-col items-start px-0 md:px-6 pt-6 md:pt-0 first:pt-0 will-change-transform">
-              <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-                <ShieldCheck className="w-5 h-5 text-[#A6766A]" />
+              <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+                <ShieldCheck className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
                 <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
                   Nossos Valores
                 </span>

@@ -1,20 +1,21 @@
-﻿# Sloane Andrade Advocacia — Website & Landing Page Institucional
+# Dra. Susimara Teixeira Bidin Advocacia — Website Institucional
 
-Aplicação web institucional de alto padrão desenvolvida para a **Dra. Sloane Ferreira de Andrade** (OAB/SP 463.336), sediada em Guaíra/SP.
+Aplicação web institucional de alto padrão desenvolvida para a **Dra. Susimara Teixeira Bidin** (OAB/PR 94.840), sediada em Araucária/PR.
 
-Projeto desenvolvido com design editorial sofisticado, paleta Rose Gold & Terracota, tipografia refinada (*Philosopher + Mulish*), suporte completo a temas Claro/Escuro e estrita conformidade com o Código de Ética e Disciplina da OAB (Resolução CFOAB 02/2015) e o Provimento 205/2021 do CFOAB.
+Projeto desenvolvido com design editorial sofisticado, paleta Vinho e Bege (Bordô `#6B1D2F`, Vinho Claro `#A3485E`, Vinho Escuro `#3D0C11`, Bege `#F7F2EC` e Grafite `#1F1F1F`), tipografia refinada (*Philosopher + Mulish*), suporte completo a temas Claro/Escuro e estrita conformidade com o Código de Ética e Disciplina da OAB (Resolução CFOAB 02/2015) e o Provimento 205/2021 do CFOAB.
 
 ---
 
 ## 🏛️ Dados Institucionais
 
-- **Escritório**: Sloane Andrade Advocacia
-- **Advogada Titular**: Dra. Sloane Ferreira de Andrade (OAB/SP 463.336)
-- **Endereço**: R. 14 B, 01077 - Joaquim Pereira Lelis, Guaíra - SP, CEP 14790-000
-- **WhatsApp / Telefone**: (17) 98121-7474
-- **E-mail**: sloaneandradeadv@gmail.com
-- **Tempo de Mercado**: Mais de 10 anos de solidez jurídica
-- **Horário de Atendimento**: Segunda a Quinta: 09:00 às 17:00 | Sexta: 09:00 às 16:00
+- **Escritório**: Dra. Susimara Teixeira Bidin Advocacia
+- **Advogada Titular**: Dra. Susimara Teixeira Bidin (OAB/PR 94.840)
+- **Especialidade**: Pós-graduada em Direito e Processo do Trabalho. Atuação em Direito do Trabalho (defesa patronal e empregados) e Direito de Família (divórcio, guarda, pensão, adoção).
+- **Endereço**: Rua Heitor Alves Guimarães, 819, Sala 4 - Centro, Araucária - PR, CEP 83702-130
+- **WhatsApp / Telefone**: (41) 98484-9550
+- **Instagram**: [@susibidin.adv](https://www.instagram.com/susibidin.adv/)
+- **Experiência**: Mais de 8 anos de prática forense
+- **Horário de Atendimento**: Segunda a Quinta: 09:00 às 17:00 | Sexta: 09:00 às 16:00 | Sábado e Domingo: Fechado
 
 ---
 
@@ -24,28 +25,26 @@ Projeto desenvolvido com design editorial sofisticado, paleta Rose Gold & Terrac
   - Títulos & Headers: **Philosopher** (Google Fonts)
   - Textos & Artigos: **Mulish** (Google Fonts)
 - **Paleta de Cores (60-30-10)**:
-  - Fundo Dominante (60%): `#FFFFFF` (Claro) / `#0F1215` (Escuro)
-  - Estrutural & Texto (30%): `#1A1D20` (Claro) / `#F3F4F6` (Escuro)
-  - Destaque Principal (10%): `#D4A396` (Ouro Rosê / Rose Gold)
-  - Variação Escura / Hovers: `#A6766A` (Terracota Rosado)
-  - Variação Clara / Cards: `#F4EAE6` (Off-White Rosado)
+  - Fundo Dominante (60%): `#FFFFFF` e `#F7F2EC` (Claro) / `#1A1A1A` e `#242424` (Escuro)
+  - Estrutural & Texto (30%): `#1F1F1F` (Texto principal) / `#6B1D2F` (Vinho Bordô)
+  - Destaque & Ações (10%): `#A3485E` (Vinho Claro / CTAs) e `#3D0C11` (Vinho Escuro / Hovers / Footer)
 
 ---
 
 ## 🚀 Stack Técnica
 
 - **Framework**: Next.js 16 (App Router) + React 19 + TypeScript
-- **Estilização**: Tailwind CSS v4
-- **Scroll & Transições**: Lenis Smooth Scroll + GSAP
+- **Estilização**: Tailwind CSS v4 + Vanilla CSS custom properties
+- **Scroll & Animações**: Lenis Smooth Scroll + GSAP 3 + ScrollTrigger + `@gsap/react`
 - **Ícones**: Lucide React
-- **Tema**: Claro / Escuro persistente em `localStorage`
+- **Tema**: Claro / Escuro persistente
 - **SEO & AI**: Schema.org LegalService (JSON-LD), `sitemap.xml`, `robots.txt`, `llms.txt`
 
 ---
 
 ## 🧭 Rotas
 
-- `/` — Landing Page principal completa (Hero, Pilares, Sobre, Áreas de Atuação, Conteúdo Educativo OAB, Google Reviews, Como Atuamos, FAQ Dinâmico, Contato/Google Maps, Footer e WhatsApp Flutuante).
+- `/` — Landing Page principal completa (Hero com Parallax, Pilares Institucionais, Sobre a Advogada com visualização curricular, Áreas de Atuação com sobreposição pinnada no desktop e acordeão mobile, Conteúdo Educativo OAB, Como Atuamos com linha do tempo de 4 etapas, FAQ por categorias, Contato com Google Maps de Araucária, Footer e WhatsApp Flutuante).
 - `/links` — Rota Link-in-Bio com Split Screen no Desktop e cartão adaptado para dispositivos móveis e Instagram.
 
 ---

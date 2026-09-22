@@ -4,7 +4,6 @@ import { InstitutionalPillars } from "@/components/InstitutionalPillars";
 import { About } from "@/components/About";
 import { PracticeAreas } from "@/components/PracticeAreas";
 import { EducationalSection } from "@/components/EducationalSection";
-import { ReviewsSection } from "@/components/ReviewsSection";
 import { HowWeWork } from "@/components/HowWeWork";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -25,7 +24,6 @@ export default function Home() {
         <About />
         <PracticeAreas />
         <EducationalSection />
-        <ReviewsSection />
         <HowWeWork />
         <FaqSection />
         <ContactSection />

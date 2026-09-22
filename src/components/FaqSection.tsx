@@ -18,11 +18,11 @@ export function FaqSection() {
   const listRef = useRef<HTMLDivElement>(null);
   const bottomCardRef = useRef<HTMLDivElement>(null);
 
-  const [activeTab, setActiveTab] = useState<string>("trabalhista");
+  const [activeTab, setActiveTab] = useState<string>("familia");
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({
+    "faq-f1": true,
     "faq-t1": true,
-    "faq-c1": true,
-    "faq-p1": true,
+    "faq-a1": true,
   });
 
   useGSAP(
@@ -111,13 +111,13 @@ export function FaqSection() {
   const currentCategory = FAQ_DATA.find((c) => c.id === activeTab) || FAQ_DATA[0];
 
   const getSpecificQuestionUrl = (question: string) => {
-    const text = `Olá, Dra. Sloane! Estive lendo a dúvida "${question}" no seu site, mas ainda fiquei com dúvidas sobre a minha situação. Poderia me orientar?`;
-    return `https://wa.me/5517981217474?text=${encodeURIComponent(text)}`;
+    const text = `Olá, Dra. Susimara! Estive lendo a dúvida "${question}" no seu site e gostaria de esclarecer sobre o meu caso. Poderia me orientar?`;
+    return `https://wa.me/5541984849550?text=${encodeURIComponent(text)}`;
   };
 
   const getGeneralFaqUrl = () => {
-    const text = `Olá, Dra. Sloane! Minha dúvida não está listada nas perguntas frequentes do site. Gostaria de uma orientação jurídica para o meu caso.`;
-    return `https://wa.me/5517981217474?text=${encodeURIComponent(text)}`;
+    const text = `Olá, Dra. Susimara! Minha dúvida não está listada nas perguntas frequentes do site. Gostaria de uma orientação jurídica para o meu caso.`;
+    return `https://wa.me/5541984849550?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -134,9 +134,9 @@ export function FaqSection() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="bullet-indicator text-[#A6766A]" />
-              <span className="font-heading uppercase text-xs tracking-widest text-[#A6766A] font-bold">
-                06 / Dúvidas Frequentes
+              <span className="bullet-indicator text-[var(--brand-burgundy-light)]" />
+              <span className="font-heading uppercase text-xs tracking-widest text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold">
+                05 / Dúvidas Frequentes
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold">
@@ -144,7 +144,7 @@ export function FaqSection() {
             </h2>
           </div>
           <p className="font-body text-sm sm:text-base text-[var(--text-muted)] max-w-xl leading-relaxed">
-            Respostas diretas e esclarecedoras para as principais questões que recebemos diariamente no escritório.
+            Respostas diretas e esclarecedoras para as principais dúvidas em Direito do Trabalho, Família e atendimento.
           </p>
         </div>
 
@@ -157,8 +157,8 @@ export function FaqSection() {
               onClick={() => handleTabChange(cat.id)}
               className={`px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-heading font-semibold transition-all cursor-pointer ${
                 activeTab === cat.id
-                  ? "bg-[#A6766A] text-white shadow-xs"
-                  : "bg-[var(--bg-card)] text-[var(--text-muted)] border border-[var(--border-subtle)]/30 hover:border-[#A6766A]"
+                  ? "bg-[var(--brand-burgundy)] text-white shadow-xs"
+                  : "bg-[var(--bg-card)] text-[var(--text-muted)] border border-[var(--border-subtle)]/30 hover:border-[var(--brand-burgundy)]"
               }`}
             >
               {cat.label}
@@ -173,7 +173,7 @@ export function FaqSection() {
             return (
               <div
                 key={item.id}
-                className="faq-accordion-item rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 overflow-hidden transition-all duration-200 will-change-transform shadow-2xs hover:border-[#A6766A]/60"
+                className="faq-accordion-item rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 overflow-hidden transition-all duration-200 will-change-transform shadow-2xs hover:border-[var(--brand-burgundy)]/60"
               >
                 <button
                   type="button"
@@ -186,7 +186,7 @@ export function FaqSection() {
                   </span>
                   <div
                     className={`w-7 h-7 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#A6766A]" : "text-[var(--text-muted)]"
+                      isOpen ? "rotate-180 text-[var(--brand-burgundy)]" : "text-[var(--text-muted)]"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -206,7 +206,7 @@ export function FaqSection() {
                         href={getSpecificQuestionUrl(item.question)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-heading font-semibold text-[#A6766A] hover:text-[#8d5e53] transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-heading font-semibold text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] hover:underline transition-colors"
                       >
                         <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
                         <span>Tirar dúvida sobre este ponto</span>
@@ -225,13 +225,13 @@ export function FaqSection() {
           className="mt-12 p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 max-w-4xl flex flex-col sm:flex-row items-center justify-between gap-4 will-change-transform shadow-sm"
         >
           <div className="flex items-center gap-3">
-            <HelpCircle className="w-6 h-6 text-[#A6766A] flex-shrink-0" />
+            <HelpCircle className="w-6 h-6 text-[var(--brand-burgundy-light)] flex-shrink-0" />
             <div>
               <h4 className="font-heading text-sm sm:text-base font-bold text-[var(--text-main)]">
                 Sua dúvida não está aqui?
               </h4>
               <p className="text-xs sm:text-sm font-body text-[var(--text-muted)]">
-                Converse diretamente com a Dra. Sloane Andrade para uma orientação jurídica individualizada.
+                Converse diretamente com a Dra. Susimara Teixeira Bidin para uma orientação jurídica individualizada.
               </p>
             </div>
           </div>

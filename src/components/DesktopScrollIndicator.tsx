@@ -14,10 +14,9 @@ const SECTIONS: SectionItem[] = [
   { id: "sobre", num: "03", name: "A Advogada" },
   { id: "atuacao", num: "04", name: "Especialidades" },
   { id: "educativo", num: "05", name: "Conteúdo" },
-  { id: "avaliacoes", num: "06", name: "Avaliações" },
-  { id: "como-atuamos", num: "07", name: "Atendimento" },
-  { id: "faq", num: "08", name: "Dúvidas" },
-  { id: "contato", num: "09", name: "Contato" },
+  { id: "como-atuamos", num: "06", name: "Atendimento" },
+  { id: "faq", num: "07", name: "Dúvidas" },
+  { id: "contato", num: "08", name: "Contato" },
 ];
 
 export function DesktopScrollIndicator() {
@@ -78,11 +77,11 @@ export function DesktopScrollIndicator() {
               <div
                 className={`absolute right-7 py-1 px-2.5 rounded-lg text-xs font-heading font-semibold whitespace-nowrap transition-all duration-300 pointer-events-none border ${
                   isHovered || (isActive && hoveredSection === null)
-                    ? "opacity-100 translate-x-0 bg-[#1A1D20]/95 text-white border-[#D4A396]/60 shadow-md scale-100"
+                    ? "opacity-100 translate-x-0 bg-[#1A1A1A]/95 text-white border-[var(--brand-burgundy-light)]/60 shadow-md scale-100"
                     : "opacity-0 translate-x-2 border-transparent scale-95"
                 }`}
               >
-                <span className="text-[#D4A396] mr-1.5 font-bold">{sec.num}</span>
+                <span className="text-[var(--brand-burgundy-light)] mr-1.5 font-bold">{sec.num}</span>
                 <span>{sec.name}</span>
               </div>
 
@@ -91,15 +90,15 @@ export function DesktopScrollIndicator() {
                 href={`#${sec.id}`}
                 onClick={(e) => scrollToSection(e, sec.id)}
                 aria-label={`Ir para a seção ${sec.name}`}
-                className="relative flex items-center justify-center w-6 h-6 focus:outline-none"
+                className="relative flex items-center justify-center w-6 h-6 focus:outline-none cursor-pointer"
               >
                 <span
                   className={`rounded-full transition-all duration-300 ${
                     isActive
-                      ? "w-3 h-3 bg-[#D4A396] ring-4 ring-[#D4A396]/30 shadow-[0_0_10px_rgba(212,163,150,0.8)] scale-110"
+                      ? "w-3 h-3 bg-[var(--brand-burgundy-light)] ring-4 ring-[var(--brand-burgundy-light)]/30 shadow-[0_0_10px_rgba(163,72,94,0.8)] scale-110"
                       : isHovered
                       ? "w-2.5 h-2.5 bg-white/80 dark:bg-white/90 scale-105"
-                      : "w-1.5 h-1.5 bg-[var(--text-muted)]/50 group-hover:bg-[#D4A396]/80"
+                      : "w-1.5 h-1.5 bg-[var(--text-muted)]/50 group-hover:bg-[var(--brand-burgundy-light)]/80"
                   }`}
                 />
               </a>

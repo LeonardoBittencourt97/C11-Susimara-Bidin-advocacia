@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import { OFFICE_INFO } from "@/lib/data";
-import { MapPin, Phone, Mail, Clock, MessageSquare, Navigation, ArrowUpRight } from "lucide-react";
+import { MapPin, Phone, Clock, MessageSquare, Navigation, ArrowUpRight } from "lucide-react";
+import { InstagramIcon } from "@/components/SocialIcons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -84,7 +85,7 @@ export function ContactSection() {
   );
 
   const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.7497746401666!2d-48.3128!3d-20.3181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bb8b663ea595e7%3A0xb36ef274d6f46146!2sR.%2014%20B%2C%201077%20-%20Joaquim%20Pereira%20Lelis%2C%20Gua%C3%ADra%20-%20SP%2C%2014790-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr";
+    "https://maps.google.com/maps?q=Rua+Heitor+Alves+Guimar%C3%A3es,+819,+Centro,+Arauc%C3%A1ria+-+PR,+83702-130&t=&z=16&ie=UTF8&iwloc=&output=embed";
 
   return (
     <section
@@ -100,9 +101,9 @@ export function ContactSection() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="bullet-indicator text-[#A6766A]" />
-              <span className="font-heading uppercase text-xs tracking-widest text-[#A6766A] font-bold">
-                07 / Canais Oficiais de Atendimento
+              <span className="bullet-indicator text-[var(--brand-burgundy-light)]" />
+              <span className="font-heading uppercase text-xs tracking-widest text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold">
+                06 / Canais Oficiais de Atendimento
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold">
@@ -110,7 +111,7 @@ export function ContactSection() {
             </h2>
           </div>
           <p className="font-body text-sm sm:text-base text-[var(--text-muted)] max-w-xl leading-relaxed">
-            Sede física em Guaíra/SP com estrutura completa para atendimento presencial e suporte online para clientes em todo o território nacional.
+            Sede física no Centro de Araucária/PR com estrutura privativa para atendimento presencial e suporte online para clientes em todo o Paraná e Brasil.
           </p>
         </div>
 
@@ -120,46 +121,46 @@ export function ContactSection() {
           <div ref={cardsColRef} className="lg:col-span-5 flex flex-col justify-between space-y-6 will-change-transform">
             <div className="space-y-4">
               {/* Card WhatsApp */}
-              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-secondary)]/70 border border-[var(--border-subtle)]/40 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[#A6766A] transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-[#A6766A] text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-secondary)]/70 border border-[var(--border-subtle)]/40 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[var(--brand-burgundy)] transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[var(--brand-burgundy)] text-white flex items-center justify-center flex-shrink-0 shadow-xs">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-heading text-xs uppercase tracking-wider text-[#A6766A] font-bold block mb-0.5">
-                    WhatsApp & Ligação Direta
+                  <span className="font-heading text-xs uppercase tracking-wider text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold block mb-0.5">
+                    WhatsApp & Ligação
                   </span>
                   <p className="font-heading text-lg font-bold text-[var(--text-main)]">
                     {OFFICE_INFO.phone}
                   </p>
                   <p className="text-xs font-body text-[var(--text-muted)] mt-1">
-                    Atendimento ágil para esclarecimento inicial e agendamento de consultas.
+                    Atendimento ágil para agendamento de consultas e esclarecimentos prévios.
                   </p>
                 </div>
               </div>
 
               {/* Card Endereço com Botão de Rota Traçada */}
-              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[#A6766A] transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] text-[#A6766A] flex items-center justify-center flex-shrink-0 shadow-xs">
+              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[var(--brand-burgundy)] transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] text-[var(--brand-burgundy)] flex items-center justify-center flex-shrink-0 shadow-xs">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="font-heading text-xs uppercase tracking-wider text-[#A6766A] font-bold block mb-0.5">
+                  <span className="font-heading text-xs uppercase tracking-wider text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold block mb-0.5">
                     Endereço da Sede
                   </span>
                   <p className="font-body text-sm font-semibold text-[var(--text-main)]">
                     {OFFICE_INFO.address}
                   </p>
                   <p className="text-xs font-body text-[var(--text-muted)] mt-1">
-                    Guaíra - São Paulo • CEP 14790-000
+                    Centro, Araucária - PR • CEP 83702-130
                   </p>
                   <div className="mt-3 pt-2.5 border-t border-[var(--border-subtle)]/25">
                     <a
                       href={OFFICE_INFO.mapsDirectionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-[#A6766A] hover:text-[#8d5e53] transition-colors group/route"
+                      className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] hover:underline transition-colors group/route"
                     >
-                      <Navigation className="w-3.5 h-3.5 transition-transform group-hover/route:rotate-12 text-[#A6766A]" />
+                      <Navigation className="w-3.5 h-3.5 transition-transform group-hover/route:rotate-12 text-[var(--brand-burgundy-light)]" />
                       <span>Traçar rota no GPS</span>
                       <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/route:translate-x-0.5 group-hover/route:-translate-y-0.5" />
                     </a>
@@ -167,28 +168,37 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* Card E-mail */}
-              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[#A6766A] transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] text-[#A6766A] flex items-center justify-center flex-shrink-0 shadow-xs">
-                  <Mail className="w-5 h-5" />
+              {/* Card Instagram */}
+              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[var(--brand-burgundy)] transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] text-[var(--brand-burgundy)] flex items-center justify-center flex-shrink-0 shadow-xs">
+                  <InstagramIcon className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-heading text-xs uppercase tracking-wider text-[#A6766A] font-bold block mb-0.5">
-                    E-mail Institucional
+                  <span className="font-heading text-xs uppercase tracking-wider text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold block mb-0.5">
+                    Instagram Oficial
                   </span>
-                  <p className="font-body text-sm font-semibold text-[var(--text-main)] break-all">
-                    {OFFICE_INFO.email}
+                  <a
+                    href={OFFICE_INFO.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-sm font-semibold text-[var(--text-main)] hover:text-[var(--brand-burgundy-light)] transition-colors inline-flex items-center gap-1"
+                  >
+                    <span>@susibidin.adv</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[var(--brand-burgundy-light)]" />
+                  </a>
+                  <p className="text-xs font-body text-[var(--text-muted)] mt-1">
+                    Conteúdo educativo e atualizações do universo trabalhista e de família.
                   </p>
                 </div>
               </div>
 
               {/* Card Horário */}
-              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[#A6766A] transition-colors">
-                <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] text-[#A6766A] flex items-center justify-center flex-shrink-0 shadow-xs">
+              <div className="contact-info-card p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 flex items-start gap-4 will-change-transform shadow-2xs hover:border-[var(--brand-burgundy)] transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] text-[var(--brand-burgundy)] flex items-center justify-center flex-shrink-0 shadow-xs">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-heading text-xs uppercase tracking-wider text-[#A6766A] font-bold block mb-0.5">
+                  <span className="font-heading text-xs uppercase tracking-wider text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)] font-bold block mb-0.5">
                     Horário de Atendimento
                   </span>
                   <p className="font-body text-xs sm:text-sm text-[var(--text-main)]">
@@ -206,7 +216,7 @@ export function ContactSection() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full btn-pill bg-[#A6766A] hover:bg-[#8d5e53] text-white py-3.5 gap-2 shadow-md text-sm sm:text-base cursor-pointer hover-lift transition-all"
+                className="w-full btn-pill bg-[var(--brand-burgundy)] hover:bg-[var(--brand-burgundy-light)] text-white py-3.5 gap-2 shadow-md text-sm sm:text-base cursor-pointer hover-lift transition-all"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
                 <span>Iniciar Conversa no WhatsApp</span>
@@ -218,7 +228,7 @@ export function ContactSection() {
           <div ref={mapColRef} className="lg:col-span-7 flex flex-col justify-between will-change-transform">
             <div className="relative w-full h-[380px] sm:h-[480px] lg:h-full min-h-[380px] rounded-2xl overflow-hidden border border-[var(--border-subtle)]/40 shadow-xs">
               <iframe
-                title="Localização do Escritório Sloane Andrade Advocacia em Guaíra SP"
+                title="Localização do Escritório Dra. Susimara Teixeira Bidin em Araucária PR"
                 src={mapEmbedUrl}
                 width="100%"
                 height="100%"
@@ -226,33 +236,33 @@ export function ContactSection() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale-[25%] contrast-[1.05]"
+                className="w-full h-full grayscale-[20%] contrast-[1.05]"
               />
               {/* Badge de Identificação no Topo do Mapa */}
-              <div className="absolute top-4 left-4 p-3 rounded-xl bg-white/95 dark:bg-[#151A1F]/95 backdrop-blur-md border border-[var(--border-subtle)]/30 text-xs shadow-md">
+              <div className="absolute top-4 left-4 p-3 rounded-xl bg-white/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md border border-[var(--border-subtle)]/30 text-xs shadow-md">
                 <span className="font-heading font-bold text-[var(--text-main)] block">
-                  Sloane Andrade Advocacia
+                  Dra. Susimara Teixeira Bidin
                 </span>
                 <span className="text-[var(--text-muted)] font-body">
-                  R. 14 B, 01077 - Guaíra/SP
+                  R. Heitor Alves Guimarães, 819 - Sala 4 - Araucária/PR
                 </span>
               </div>
 
               {/* Botão de Rota Traçada Flutuante na Base do Mapa */}
-              <div className="absolute bottom-4 inset-x-4 sm:left-auto sm:right-4 p-2 sm:p-2.5 rounded-2xl bg-white/95 dark:bg-[#151A1F]/95 backdrop-blur-md border border-[var(--border-subtle)]/40 shadow-xl flex items-center justify-between sm:justify-start gap-3">
+              <div className="absolute bottom-4 inset-x-4 sm:left-auto sm:right-4 p-2 sm:p-2.5 rounded-2xl bg-white/95 dark:bg-[#1A1A1A]/95 backdrop-blur-md border border-[var(--border-subtle)]/40 shadow-xl flex items-center justify-between sm:justify-start gap-3">
                 <div className="hidden sm:block pl-2 pr-1">
                   <span className="font-heading text-xs font-bold text-[var(--text-main)] block">
                     Como Chegar
                   </span>
                   <span className="text-[0.6875rem] text-[var(--text-muted)] font-body block">
-                    Guaíra/SP e região
+                    Araucária e Região Metropolitana de Curitiba
                   </span>
                 </div>
                 <a
                   href={OFFICE_INFO.mapsDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-pill bg-[#A6766A] hover:bg-[#8d5e53] hover:scale-105 text-white py-2.5 px-4 text-xs font-semibold gap-2 shadow-md inline-flex items-center justify-center w-full sm:w-auto transition-all cursor-pointer"
+                  className="btn-pill bg-[var(--brand-burgundy)] hover:bg-[var(--brand-burgundy-light)] hover:scale-105 text-white py-2.5 px-4 text-xs font-semibold gap-2 shadow-md inline-flex items-center justify-center w-full sm:w-auto transition-all cursor-pointer"
                 >
                   <Navigation className="w-3.5 h-3.5 fill-white text-white" />
                   <span>Traçar Rota no Google Maps</span>

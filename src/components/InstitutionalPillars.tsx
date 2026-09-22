@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { Award, UserCheck, Scale, ShieldCheck } from "lucide-react";
+import { Award, UserCheck, Scale, ShieldCheck, GraduationCap } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -17,7 +17,7 @@ export function InstitutionalPillars() {
 
   useGSAP(
     () => {
-      // Linha conectora Rose Gold superior que se desenha ao entrar na tela
+      // Linha conectora Vinho superior que se desenha ao entrar na tela
       if (lineRef.current) {
         gsap.fromTo(
           lineRef.current,
@@ -92,19 +92,19 @@ export function InstitutionalPillars() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25 mb-8 text-[var(--text-muted)]">
-          {/* Linha Rose Gold desenhada pelo scroll */}
+          {/* Linha Vinho desenhada pelo scroll */}
           <div
             ref={lineRef}
-            className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-[#A6766A] via-[#D4A396] to-transparent will-change-transform"
+            className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-[var(--brand-burgundy)] via-[var(--brand-burgundy-light)] to-transparent will-change-transform"
           />
           <div className="flex items-center gap-2.5">
-            <Scale className="w-4 h-4 text-[#A6766A]" />
+            <Scale className="w-4 h-4 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
             <span className="font-heading uppercase text-xs tracking-widest font-bold text-[var(--text-main)]">
               Pilares Institucionais de Atuação
             </span>
           </div>
           <span className="font-heading text-xs tracking-wider text-[var(--text-muted)] hidden sm:inline">
-            Guaíra - SP • Atendimento Presencial e Digital
+            Araucária - PR • Atendimento Presencial e Digital
           </span>
         </div>
 
@@ -113,31 +113,31 @@ export function InstitutionalPillars() {
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[var(--border-subtle)]/30"
         >
-          {/* 1. Solidez & Prática Forense */}
+          {/* 1. Experiência Forense */}
           <div className="pillar-item flex flex-col items-start px-0 sm:px-6 pt-6 sm:pt-0 first:pt-0 will-change-transform">
-            <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-              <Award className="w-5 h-5 text-[#A6766A]" />
+            <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+              <Award className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
               <span
                 className="metric-counter font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-main)]"
-                data-target="10"
+                data-target="8"
                 data-prefix="+"
                 data-suffix=" Anos"
               >
-                +10 Anos
+                +8 Anos
               </span>
             </div>
             <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-              Solidez & Prática Forense
+              Prática Trabalhista & Família
             </h3>
             <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Trajetória consolidada desde 2014, com sólida passagem pela Polícia Civil e atuação contínua em comarcas da região.
+              Mais de 8 anos de experiência prática, atuando na defesa estratégica de empresas e na proteção dos direitos trabalhistas e familiares.
             </p>
           </div>
 
           {/* 2. Atendimento com a Titular */}
           <div className="pillar-item flex flex-col items-start px-0 sm:px-6 pt-6 sm:pt-0 will-change-transform">
-            <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-              <UserCheck className="w-5 h-5 text-[#A6766A]" />
+            <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+              <UserCheck className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
               <span
                 className="metric-counter font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-main)]"
                 data-target="100"
@@ -148,48 +148,42 @@ export function InstitutionalPillars() {
               </span>
             </div>
             <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-              Atendimento com a Titular
+              Atendimento Direto com a Titular
             </h3>
             <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Você não conversa com estagiários ou intermediários. Toda a estratégia é desenhada diretamente pela Dra. Sloane Andrade.
+              Sem intermediários ou atendentes genéricos. Toda a análise, planejamento e condução do seu caso são feitos pela Dra. Susimara Teixeira Bidin.
             </p>
           </div>
 
-          {/* 3. Estratégia Sob Medida */}
+          {/* 3. Especialização Pós-Graduada */}
           <div className="pillar-item flex flex-col items-start px-0 sm:px-6 pt-6 sm:pt-0 will-change-transform">
-            <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-              <Scale className="w-5 h-5 text-[#A6766A]" />
+            <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+              <GraduationCap className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
               <span className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-main)]">
-                Sob Medida
+                Pós-Graduada
               </span>
             </div>
             <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-              Estratégia Sob Medida
+              Direito & Processo do Trabalho
             </h3>
             <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Análise aprofundada da realidade do cliente para buscar a solução mais célere, seja via acordo extrajudicial ou via judicial.
+              Especialização acadêmica aprofundada aliada à prática forense, oferecendo segurança técnica e atualização contínua em cada tese.
             </p>
           </div>
 
-          {/* 4. Confiança Comprovada */}
+          {/* 4. Rigor Ético & Sigilo */}
           <div className="pillar-item flex flex-col items-start px-0 sm:px-6 pt-6 sm:pt-0 will-change-transform">
-            <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-              <ShieldCheck className="w-5 h-5 text-[#A6766A]" />
-              <span
-                className="metric-counter font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-main)]"
-                data-target="5.0"
-                data-prefix=""
-                data-suffix=" ★"
-                data-decimal="true"
-              >
-                5.0 ★
+            <div className="flex items-center gap-2 mb-2 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]">
+              <ShieldCheck className="w-5 h-5 text-[var(--brand-burgundy)] dark:text-[var(--brand-burgundy-light)]" />
+              <span className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-main)]">
+                Rigor Ético
               </span>
             </div>
             <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-              Confiança Comprovada
+              Conformidade OAB / Sigilo Total
             </h3>
             <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Nota máxima e reconhecimento de clientes no Google Reviews pela clareza, empatia e dedicação com os mínimos detalhes.
+              Atuação transparente, humanizada e 100% alinhada ao Provimento 205/2021 da OAB, assegurando confidencialidade e zelo inegociável.
             </p>
           </div>
         </div>

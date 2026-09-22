@@ -20,50 +20,52 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sloaneandrade-adv.vercel.app"),
+  metadataBase: new URL("https://susimarabidin.adv.br"),
   title: {
-    default: "Sloane Andrade Advocacia | Guaíra - SP",
-    template: "%s | Sloane Andrade Advocacia",
+    default: "Susimara Teixeira Bidin | Advocacia em Araucária - PR (Trabalho e Família)",
+    template: "%s | Susimara Teixeira Bidin Advocacia",
   },
   description:
-    "Escritório de advocacia em Guaíra/SP especializado em Direito do Trabalho, Previdenciário/Acidentário, Direito Civil e Família. OAB/SP 463.336. Mais de 10 anos de experiência com atendimento humanizado.",
+    "Escritório de advocacia em Araucária/PR especializado em Direito do Trabalho e Direito de Família. Dra. Susimara Teixeira Bidin OAB/PR 94.840. Mais de 8 anos de experiência com atendimento humanizado e estratégico.",
   keywords: [
-    "advogada guaíra sp",
-    "sloane andrade advocacia",
-    "advogado trabalhista guaíra",
-    "acidente de trabalho inss guaíra",
-    "divórcio e pensão alimentícia guaíra",
-    "inventário e partilha de bens sp",
-    "direito civil barretos guaíra",
+    "advogada araucaria pr",
+    "susimara bidin advocacia",
+    "advogado trabalhista araucaria",
+    "divorcio e pensao araucaria",
+    "guarda compartilhada araucaria",
+    "rescisao trabalhista araucaria pr",
+    "horas extras araucaria",
+    "direito de familia araucaria pr",
+    "oab pr 94840",
   ],
-  authors: [{ name: "Dra. Sloane Ferreira de Andrade" }],
-  creator: "Dra. Sloane Ferreira de Andrade",
-  publisher: "Sloane Andrade Advocacia",
+  authors: [{ name: "Dra. Susimara Teixeira Bidin" }],
+  creator: "Dra. Susimara Teixeira Bidin",
+  publisher: "Susimara Teixeira Bidin Advocacia",
   alternates: {
-    canonical: "https://sloaneandrade-adv.vercel.app",
+    canonical: "https://susimarabidin.adv.br",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://sloaneandrade-adv.vercel.app",
-    title: "Sloane Andrade Advocacia | Guaíra - SP",
+    url: "https://susimarabidin.adv.br",
+    title: "Susimara Teixeira Bidin | Advocacia em Araucária - PR",
     description:
-      "Segurança jurídica e atuação estratégica na defesa dos seus direitos e do seu trabalho. Mais de 10 anos de experiência e atendimento humanizado.",
-    siteName: "Sloane Andrade Advocacia",
+      "Atuação jurídica estratégica e humanizada em Direito do Trabalho e Direito de Família. Dra. Susimara Teixeira Bidin OAB/PR 94.840.",
+    siteName: "Susimara Teixeira Bidin Advocacia",
     images: [
       {
         url: "/logo_semfundo_escritapreta_paramodoclaro.png",
         width: 1200,
         height: 630,
-        alt: "Sloane Andrade Advocacia",
+        alt: "Susimara Teixeira Bidin Advocacia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sloane Andrade Advocacia | Guaíra - SP",
+    title: "Susimara Teixeira Bidin | Advocacia em Araucária - PR",
     description:
-      "Segurança jurídica e atuação estratégica na defesa dos seus direitos e do seu trabalho. Dra. Sloane Ferreira de Andrade OAB/SP 463.336.",
+      "Atuação jurídica estratégica e humanizada em Direito do Trabalho e Direito de Família. Dra. Susimara Teixeira Bidin OAB/PR 94.840.",
     images: ["/logo_semfundo_escritapreta_paramodoclaro.png"],
   },
   robots: {
@@ -85,8 +87,7 @@ export const metadata: Metadata = {
       { url: "/favicon_512x512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
-      { url: "/favicon_180x180.png", sizes: "180x180", type: "image/png" },
-      { url: "/favicon-apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon_apple-touch-icon180x180.png", sizes: "180x180", type: "image/png" },
     ],
     shortcut: "/favicon_32x32.png",
   },
