@@ -78,17 +78,17 @@ export function Navbar() {
 
   return (
     <>
-      {/* 1. LOGO MOBILE FIXA */}
-      <div className="lg:hidden fixed top-2.5 left-2.5 sm:left-6 z-50 pointer-events-none">
+      {/* 1. LOGO MOBILE FIXA SEPARADA - DOBRO DO TAMANHO */}
+      <div className="lg:hidden fixed top-1 left-2 sm:left-4 z-50 pointer-events-none">
         <Link href="#inicio" className="flex items-center group focus:outline-none pointer-events-auto">
-          <div className="relative h-11 sm:h-13 w-40 sm:w-48 transition-transform duration-300 group-hover:scale-105">
+          <div className="relative h-20 sm:h-24 w-52 sm:w-64 transition-transform duration-300 group-hover:scale-105">
             <Image
               src={currentLogo}
               alt="Dra. Susimara Teixeira Bidin Advocacia"
               fill
               priority
               className="object-contain object-left drop-shadow-md"
-              sizes="180px"
+              sizes="260px"
             />
           </div>
         </Link>
@@ -105,23 +105,25 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="relative min-h-[3rem] sm:min-h-[3.5rem] flex items-center justify-between gap-2 sm:gap-4">
             
-            {/* Espaçador Mobile */}
-            <div className="lg:hidden w-36 sm:w-44 flex-shrink-0 pointer-events-none" />
+            {/* Espaçador Mobile para proteger a área da logo sem afetar os botões */}
+            <div className="lg:hidden w-40 sm:w-52 flex-shrink-0 pointer-events-none" />
 
-            {/* Logo Desktop */}
-            <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-64 xl:w-72 h-12">
-              <Link href="#inicio" className="flex items-center group focus:outline-none">
-                <div className="relative h-12 w-60 xl:w-68 transition-transform duration-300 group-hover:scale-105">
-                  <Image
-                    src={currentLogo}
-                    alt="Dra. Susimara Teixeira Bidin Advocacia"
-                    fill
-                    priority
-                    className="object-contain object-left drop-shadow-md"
-                    sizes="260px"
-                  />
-                </div>
-              </Link>
+            {/* Logo Desktop: Separada da altura do menu, ancorada exatamente no mesmo lugar com o dobro do tamanho */}
+            <div className="hidden lg:flex items-center justify-start relative flex-shrink-0 w-64 xl:w-72 h-12 pointer-events-none">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-auto">
+                <Link href="#inicio" className="flex items-center group focus:outline-none">
+                  <div className="relative h-24 w-80 xl:h-28 xl:w-96 transition-transform duration-300 group-hover:scale-105">
+                    <Image
+                      src={currentLogo}
+                      alt="Dra. Susimara Teixeira Bidin Advocacia"
+                      fill
+                      priority
+                      className="object-contain object-left drop-shadow-md"
+                      sizes="(min-width: 1280px) 384px, 320px"
+                    />
+                  </div>
+                </Link>
+              </div>
             </div>
 
             {/* Menu Desktop */}
@@ -338,13 +340,13 @@ export function Navbar() {
         >
           <div>
             <div className="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25">
-              <div className="relative h-10 w-40">
+              <div className="relative h-14 w-48">
                 <Image
                   src={drawerLogo}
                   alt="Dra. Susimara Teixeira Bidin Advocacia"
                   fill
                   className="object-contain object-left"
-                  sizes="160px"
+                  sizes="200px"
                 />
               </div>
               <button
