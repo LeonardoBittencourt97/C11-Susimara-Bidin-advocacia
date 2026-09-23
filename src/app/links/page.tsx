@@ -12,6 +12,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://susimarabidin.adv.br/links",
   },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://susimarabidin.adv.br/links",
+    title: "Canais Oficiais & Links | Dra. Susimara Teixeira Bidin Advocacia",
+    description:
+      "Acesse rapidamente o WhatsApp oficial, Instagram e localização da sede em Araucária/PR.",
+    siteName: "Dra. Susimara Teixeira Bidin Advocacia",
+    images: [
+      {
+        url: "/og-image_optimized_300.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Dra. Susimara Teixeira Bidin Advocacia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Canais Oficiais & Links | Dra. Susimara Teixeira Bidin Advocacia",
+    description:
+      "Acesse rapidamente o WhatsApp oficial, Instagram e localização da sede em Araucária/PR.",
+    images: ["/og-image_optimized_300.jpeg"],
+  },
 };
 
 export default function LinksPage() {

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "Susimara Teixeira Bidin Advocacia",
     images: [
       {
-        url: "/logo_semfundo_escritapreta_paramodoclaro.png",
+        url: "/og-image_optimized_300.jpeg",
         width: 1200,
         height: 630,
         alt: "Susimara Teixeira Bidin Advocacia",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Susimara Teixeira Bidin | Advocacia em Araucária - PR",
     description:
       "Atuação jurídica estratégica e humanizada em Direito do Trabalho e Direito de Família. Dra. Susimara Teixeira Bidin OAB/PR 94.840.",
-    images: ["/logo_semfundo_escritapreta_paramodoclaro.png"],
+    images: ["/og-image_optimized_300.jpeg"],
   },
   robots: {
     index: true,
