@@ -19,8 +19,10 @@ const mulish = Mulish({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://susimara-bidin-advocacia.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://susimarabidin.adv.br"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Susimara Teixeira Bidin | Advocacia em Araucária - PR (Trabalho e Família)",
     template: "%s | Susimara Teixeira Bidin Advocacia",
@@ -42,12 +44,12 @@ export const metadata: Metadata = {
   creator: "Dra. Susimara Teixeira Bidin",
   publisher: "Susimara Teixeira Bidin Advocacia",
   alternates: {
-    canonical: "https://susimarabidin.adv.br",
+    canonical: siteUrl,
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://susimarabidin.adv.br",
+    url: siteUrl,
     title: "Susimara Teixeira Bidin | Advocacia em Araucária - PR",
     description:
       "Atuação jurídica estratégica e humanizada em Direito do Trabalho e Direito de Família. Dra. Susimara Teixeira Bidin OAB/PR 94.840.",

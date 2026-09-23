@@ -5,17 +5,19 @@ import { OFFICE_INFO, LAWYER_PROFILE } from "@/lib/data";
 import { MessageSquare, Globe, MapPin, ShieldCheck, ArrowUpRight, Scale } from "lucide-react";
 import { InstagramIcon } from "@/components/SocialIcons";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://susimara-bidin-advocacia.vercel.app";
+
 export const metadata: Metadata = {
   title: "Canais Oficiais & Links | Dra. Susimara Teixeira Bidin Advocacia",
   description:
     "Acesse rapidamente o WhatsApp oficial da Dra. Susimara Teixeira Bidin, Instagram, localização em Araucária/PR e website institucional.",
   alternates: {
-    canonical: "https://susimarabidin.adv.br/links",
+    canonical: `${siteUrl}/links`,
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://susimarabidin.adv.br/links",
+    url: `${siteUrl}/links`,
     title: "Canais Oficiais & Links | Dra. Susimara Teixeira Bidin Advocacia",
     description:
       "Acesse rapidamente o WhatsApp oficial, Instagram e localização da sede em Araucária/PR.",
